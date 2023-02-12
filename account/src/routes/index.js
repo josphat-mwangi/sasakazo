@@ -45,7 +45,10 @@ router.get('/all', async(req, res)=>{
 });
 
 
-router.post('/transfer', transfer);
+router.post('/transfer', async(req, res)=>{
+    await transfer()
+})
+    
 
 
 module.exports = router;
