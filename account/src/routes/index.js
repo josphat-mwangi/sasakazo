@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { getAccount, createAccont } = require('../controller/index');
+const { getAccount, createAccont, transfer } = require('../controller/index');
 const request             = require("request");
 
 
@@ -43,6 +43,9 @@ router.post('/', async(req, res)=>{
 router.get('/all', async(req, res)=>{
     await getAccount(req.body.phoneNumber)
 });
+
+
+router.post('/transfer', transfer);
 
 
 module.exports = router;
