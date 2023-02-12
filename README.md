@@ -22,3 +22,4 @@
 ## account routes
 1. /account/ - create new account
 2. /account/all - gets account by users phonenumber
+3. /account/transfer - transfer from one wallet to another using phonenumber
